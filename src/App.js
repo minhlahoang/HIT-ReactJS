@@ -1,19 +1,32 @@
-import logo from './logo.svg';
-
-// import './App.css';
-import '../../my-app/src/style.css'
+ import './App.css';
+// import '../../my-app/src/style.css'
 import '../src/custom.js'
-import { Header } from './components/Buoi1/Header';
-import { Section } from './components/Buoi1/Section';
-import { Footer } from './components/Buoi1/Footer';
-import { Counter } from './components/count/Counter';
-import { Person } from './components/person/Person';
-import { Youtube } from './components/youtube/Youtube';
+// import { Header } from './components/Buoi1/Header';
+// import { Section } from './components/Buoi1/Section';
+// import { Footer } from './components/Buoi1/Footer';
+// import { Counter } from './components/count/Counter';
+// import { Person } from './components/person/Person';
+// import { Youtube } from './components/youtube/Youtube';
+import { Card } from './components/card/Card';
+import { CardData } from '../src/data';
+import { Toggle } from './components/toggle/Toggle';
 
 function App() {
   return (
+
     <div className="App">
-    <Youtube></Youtube>
+    {/* <Toggle></Toggle> */}
+    
+    {
+      CardData.map((item, index) => (
+      
+      <Card key={item.id} title={item.title} content = {item.content} image = {item.image} background = {item.background}></Card>
+
+      ))
+    }
+    
+
+    {/* <Youtube></Youtube> */}
     {/* <Person name="Quần jean" type="Skinny" color ="Đen" size = "L">Person1</Person>
     <Person name="Váy" type="váy công chúa" color ="Trắng" size = "M">Person1</Person> */}
     
